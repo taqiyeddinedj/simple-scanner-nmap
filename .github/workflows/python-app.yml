@@ -27,5 +27,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Test with app
-      run: |
-        python simple-scanner-nmap.py
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: docker-hub-repo/image-name
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
