@@ -29,7 +29,7 @@ jobs:
     - name: Test with app
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: docker-hub-repo/image-name
+        image: taqiyeddinedj/my-repo
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
